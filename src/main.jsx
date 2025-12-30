@@ -7,9 +7,7 @@ import { RouterProvider } from 'react-router-dom'
 import { HelmetProvider } from '@dr.pogodin/react-helmet';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <HelmetProvider>
-      <RouterProvider router={router} />
-    </HelmetProvider>
-  </StrictMode>,
+  <HelmetProvider>
+    <RouterProvider router={router} />
+  </HelmetProvider>,
 )
