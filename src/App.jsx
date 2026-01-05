@@ -15,8 +15,8 @@ function App() {
 
 	console.log(language);
 
-	let services_en = ["Product Design (UI/UX)", "Web & App Development", "Mobile App Development", "MVP & Startup Support", "Technical Consulting", "Tech Brand Identity"];
-	let services_fr = ["Santé", "Croissance", "Succès", "Opportunités", "Réussites", "Prosperité", "Paix", "Amour"];
+	let services_en = ["Product Design (UI/UX)", "Web Development", "App Development", "MVP & Startup Support", "Technical Consulting", "Tech Brand Identity"];
+	let services_fr = ["Design de produits (UI/UX)", "Développement web", "Développement d'applications", "MVP & Support de startup", "Consulting technique", "Identité de marque technologique"];
 
 	const services = language === "en" ? services_en : services_fr;
 
@@ -29,12 +29,12 @@ function App() {
 				<meta name='description' content='Beginner friendly page for learning React Helmet.' />
 			</Helmet> */}
 
-			<header className="relative max-w-[calc(100vw-50px)] lg:max-w-[320px] mx-auto flex h-[calc(100vh-150px)] flex-col grow w-full overflow-hidden rounded-b-3xl rounded-t-3xl mt-8">
+			<header className="relative max-w-[calc(100vw-50px)] lg:max-w-[320px] mx-auto flex h-[calc(100vh-150px)] flex-col grow w-full overflow-hidden rounded-b-3xl rounded-t-3xl mt-6">
 
 				<img className='absolute w-full h-full object-cover' src="/my-photo-2.jpg" alt="" />
 				{/* <img className='absolute z-10' src="/dark-gold-confetti.png" alt="" /> */}
 				{/* Overlay */}
-				<div className="absolute top-0 h-1/2 w-full bg-linear-to-b from-blue-300/50 to-ransparent"></div>
+				<div className="absolute top-0 h-1/2 w-full bg-linear-to-b from-sky-300/50 to-ransparent"></div>
 				<div className="absolute bottom-0 h-full w-full bg-linear-to-t from-black/90 to-ransparent"></div>
 				{/* Happy New Year */}
 				<div className='relative flex flex-col items-start z-10 px-6 mt-auto'>
@@ -78,8 +78,8 @@ function App() {
 				<div className="grid lg:grid-cols-3">
 					<div></div>
 					<div className='text-left p-6 w-full flex flex-col gap-3'>
-						<h2 className="text-4xl font-bold text-white">From first idea to final launch</h2>
-						<p className="text-white/70">Design, development, and structure working together</p>
+						<h2 className="text-4xl font-bold text-white">{t('sectionTitle1')}</h2>
+						<p className="text-white/70">{t('sectionDesc1')}</p>
 					</div>
 				</div>
 			</section>
@@ -87,21 +87,21 @@ function App() {
 			<section className='relative z-10 lg:mb-4'>
 				<div className="grid lg:grid-cols-3">
 					<div></div>
-					<div className='text-center px-6 py-6 w-auto flex flex-col gap-3'>
-						<div className="relative flex items-end lg:items-end gap-6 cursor-default">
+					<div className='text-center px-6 py-12 w-auto flex flex-col gap-3'>
+						<div className="relative flex items-center gap-6 cursor-default">
 
 							{/* photo */}
 							<RevealElement>
-								<div className="flex shrink-0 size-12 rounded-full mb-11 bg-zinc-700 text-sky-300 border-2 border-zinc-600 overflow-hidden">
+								<div className="flex shrink-0 size-12 rounded-full bg-zinc-700 text-sky-300 border-2 border-zinc-600 overflow-hidden">
 									<LuHandshake className='m-auto' size={30} />
 								</div>
 							</RevealElement>
 							{/* Bubble */}
 							<RevealElement>
-								<div className="relative z-10 flex p-5 hover:scale-105 gap-2 lg:gap-3 bg-zinc-800 items-start border border-zinc-700 rounded-xl shadow-2xl duration-150 shadow-primary-300/70">
+								<div className="relative z-10 flex p-3 hover:scale-105 bg-zinc-800 items-start border border-zinc-700 rounded-xl shadow-2xl duration-150 shadow-sky-300/40">
 									<div className="absolute bottom-1/2 translate-y-1/2 -left-3 rotate-45 bg-zinc-800 border size-7 border-zinc-700"></div>
 									<div className="absolute bottom-1/2 translate-y-1/2 left-0 bg-zinc-800 w-7 h-10"></div>
-									<div>
+									<div className='relative z-10'>
 										<p className="text-2xl text-left font-bold text-slate-100 ml-5">{t('openForBusiness')}</p>
 									</div>
 								</div>
@@ -117,23 +117,31 @@ function App() {
 					<div></div>
 					<div className='text-left p-6 w-full flex flex-col gap-3'>
 						<RevealElement>
-							<h2 className="text-3xl font-bold text-white">Full web portfolio coming soon</h2>
+							<h2 className="text-2xl font-bold text-white">{t('sectionTitle2')}</h2>
 						</RevealElement>
-						<p className="text-white/70">Follow my activities on:</p>
-						<div className="flex gap-4">
-							<a target='_blank' href='https://cm.linkedin.com/in/nloga-joseph-christ-7b1651194' className="flex shrink-0 size-10 rounded-full mb-11 bg-zinc-700 border-2 border-zinc-600 overflow-hidden">
-								<FaLinkedinIn className='m-auto text-sky-300' size={20} />
-							</a>
-							<a target='_blank' href='https://web.facebook.com/christ.nloga/?_rdc=1&_rdr#' className="flex shrink-0 size-10 rounded-full mb-11 bg-zinc-700 border-2 border-zinc-600 overflow-hidden">
-								<FaFacebookF className='m-auto text-sky-300' size={20} />
-							</a>
-							<a target='_blank' href='https://x.com/_nloga?t=Y_tI_pkTsMRq0zljqk66Kg&s=08' className="flex shrink-0 size-10 rounded-full mb-11 bg-zinc-700 border-2 border-zinc-600 overflow-hidden">
-								<BsTwitterX className='m-auto text-sky-300' size={20} />
-							</a>
-						</div>
+						<RevealElement>
+							<p className="text-white/70">{t('sectionDesc2')}</p>
+						</RevealElement>
+						<RevealElement>
+							<div className="flex gap-4">
+								<a target='_blank' href='https://cm.linkedin.com/in/nloga-joseph-christ-7b1651194' className="flex hover:brightness-110 active:brightness-125 transition-all duration-150 shrink-0 size-10 rounded-full mb-11 bg-zinc-700 border-2 border-zinc-600 overflow-hidden">
+									<FaLinkedinIn className='m-auto text-sky-300' size={20} />
+								</a>
+								<a target='_blank' href='https://web.facebook.com/christ.nloga/?_rdc=1&_rdr#' className="flex hover:brightness-110 active:brightness-125 transition-all duration-150 shrink-0 size-10 rounded-full mb-11 bg-zinc-700 border-2 border-zinc-600 overflow-hidden">
+									<FaFacebookF className='m-auto text-sky-300' size={20} />
+								</a>
+								<a target='_blank' href='https://x.com/_nloga?t=Y_tI_pkTsMRq0zljqk66Kg&s=08' className="flex hover:brightness-110 active:brightness-125 shrink-0 size-10 rounded-full mb-11 bg-zinc-700 border-2 border-zinc-600 overflow-hidden">
+									<BsTwitterX className='m-auto text-sky-300' size={20} />
+								</a>
+							</div>
+						</RevealElement>
 					</div>
 				</div>
 			</section>
+
+			<footer className='py-6 px-6'>
+				<p className="text-zinc-400 text-left">© 2026 — Christ Nloga</p>
+			</footer>
 		</div >
 	)
 }

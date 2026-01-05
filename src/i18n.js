@@ -26,8 +26,10 @@ i18n
           beforeProfile: 'A new year begins.',
           beforeProfile2: 'So do new ideas.',
           sectionTitle1: 'From first idea to final launch',
+          sectionTitle2: 'Full web portfolio coming soon, stay tuned!',
           sectionDesc1: 'Design, development, and structure working together',
-          openForBusiness: 'Now open for new collaborations for 2026',
+          sectionDesc2: 'Follow my activities on:',
+          openForBusiness: 'Now open for new collaborations in 2026',
         }
       },
 
@@ -40,7 +42,9 @@ i18n
           beforeProfile: 'Une nouvelle année commence.',
           beforeProfile2: 'Tout comme les nouvelles idées.',
           sectionTitle1: 'De l\'idée initiale au lancement final',
+          sectionTitle2: 'Portfolio web en cours, restez connecté!',
           sectionDesc1: 'Design, développement et structure travaillant ensemble',
+          sectionDesc2: 'Suivez mes activités sur:',
           openForBusiness: 'Ouvert à de nouvelles collaborations pour 2026',
         }
       }
