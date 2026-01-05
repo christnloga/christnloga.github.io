@@ -5,6 +5,7 @@ import App from './App.jsx'
 import router from './routes.jsx'
 import { RouterProvider } from 'react-router-dom'
 import { HelmetProvider } from '@dr.pogodin/react-helmet';
+import './i18n';
 
 createRoot(document.getElementById('root')).render(
   <HelmetProvider>
