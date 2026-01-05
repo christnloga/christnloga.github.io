@@ -18,11 +18,11 @@ function App() {
 	return (
 		<div className='h-screen flex flex-col justify-between w-full overflow-x-hidden'>
 			<img src="/floor.png" className="absolute left-0 bottom-0 saturate-0 mix-blend-screen opacity-10 object-scale-down" alt="" />
-			<Helmet>
+			{/* <Helmet>
 				<title>Let's Build Together In 2026</title>
 				<link rel="icon" type="image/svg+xml" href="/my-photo-2.jpg" />
-				{/* <meta name='description' content='Beginner friendly page for learning React Helmet.' /> */}
-			</Helmet>
+				<meta name='description' content='Beginner friendly page for learning React Helmet.' />
+			</Helmet> */}
 
 			<div className="relative max-w-[calc(100vw-50px)] lg:max-w-[320px] mx-auto flex grow w-full overflow-hidden rounded-b-3xl">
 
