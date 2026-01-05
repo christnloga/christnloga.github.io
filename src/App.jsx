@@ -10,8 +10,10 @@ function App() {
 
 	console.log(language);
 
+	let wishes_en = ["Health", "Growth", "Success", "Opportunities", "Achievements", "Prosperity", "Peace", "Love"];
+	let wishes_fr = ["Santé", "Croissance", "Succès", "Opportunités", "Réussites", "Prosperité", "Paix", "Amour"];
 
-	const wishes = ["Health", "Growth", "Success", "Opportunities", "Achievements", "Prosperity", "Peace", "Love"];
+	const wishes = language === "en" ? wishes_en : wishes_fr;
 
 	return (
 		<div className='h-screen flex flex-col justify-between w-full overflow-x-hidden'>
@@ -41,15 +43,11 @@ function App() {
 
 				<div className='relative flex flex-col items-start z-10 p-6 mt-auto mb-20'>
 					<p className="text-styled text-white text-4xl ml-5 font-bold">{t('happy')}</p>
-					<h2 className={"text-white font-bold -mt-10 -ml-2 text-shadow uppercase" + (language === "fr" ? " text-[90px]" : " text-[100px]")}>{t('new')}</h2>
+					<h2 className={"text-[100px] text-white font-bold -mt-10 -ml-2 text-shadow uppercase"}>{t('new')}</h2>
 					<h2 className="text-[60px] text-white -mt-16 ml-3 text-shadow uppercase">{t('year')}</h2>
 				</div>
 
 			</div>
-			{/* <div className='p-6'>
-				<h2 className="text-styled text-4xl font-bold">Happy</h2>
-				<h2 className="text-[100px] font-bold">NEW</h2>
-			</div> */}
 			<div className="relative overflow-x-hidden pt-6">
 				<InfiniteCarousel
 					items={wishes.map((wish) => (
