@@ -13,6 +13,7 @@ const HappyNewYear = () => {
   return (
     <div className="bg-white">
       <Helmet>
+        <link rel="icon" type="image/svg+xml" href="/photo-square.jpg" />
         <title>
           La famille Mbebi vous souhaite bonnes fêtes de fin d'année...Lire la
           suite
