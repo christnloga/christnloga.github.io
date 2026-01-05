@@ -43,7 +43,7 @@ export default function InfiniteCarousel({
 
       <motion.div
         className="flex will-change-transform touch-pan-x"
-        animate={shouldReduceMotion ? undefined : { x: [-width / 2, 0] }}
+        animate={shouldReduceMotion ? undefined : { x: [0, -width] }}
         transition={{
           repeat: Infinity,
           ease: "linear",

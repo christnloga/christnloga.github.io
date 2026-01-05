@@ -1,4 +1,5 @@
 import './App.css';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Helmet } from '@dr.pogodin/react-helmet';
 import InfiniteCarousel from "./components/InfiniteCarousel";
 import { GoGift } from "react-icons/go";
@@ -12,6 +13,9 @@ import { BsTwitterX } from 'react-icons/bs';
 function App() {
 	const { t, i18n } = useTranslation();
 	const language = i18n.resolvedLanguage;
+
+	const { scrollY } = useScroll();
+	const scale = useTransform(scrollY, [0, 500], [1, 1.25]);
 
 	console.log(language);
 
@@ -31,16 +35,22 @@ function App() {
 
 			<header className="relative max-w-[calc(100vw-50px)] lg:max-w-[320px] mx-auto flex h-[calc(100vh-150px)] flex-col grow w-full overflow-hidden rounded-b-3xl rounded-t-3xl mt-6">
 
-				<img className='absolute w-full h-full object-cover' src="/my-photo-2.jpg" alt="" />
+				<motion.img style={{ scale }} className='absolute w-full h-full object-cover' src="/my-photo-2.jpg" alt="" />
 				{/* <img className='absolute z-10' src="/dark-gold-confetti.png" alt="" /> */}
 				{/* Overlay */}
 				<div className="absolute top-0 h-1/2 w-full bg-linear-to-b from-sky-300/50 to-ransparent"></div>
 				<div className="absolute bottom-0 h-full w-full bg-linear-to-t from-black/90 to-ransparent"></div>
 				{/* Happy New Year */}
 				<div className='relative flex flex-col items-start z-10 px-6 mt-auto'>
-					<p className="text-styled text-white text-4xl ml-5 font-bold">{t('happy')}</p>
-					<h2 className={"text-[100px] text-white font-bold -mt-10 -ml-2 text-shadow uppercase"}>{t('new')}</h2>
-					<h2 className="text-[60px] text-white -mt-16 ml-3 text-shadow uppercase">{t('year')}</h2>
+					<RevealElement>
+						<p className="text-styled text-white text-4xl ml-5 font-bold">{t('happy')}</p>
+					</RevealElement>
+					<RevealElement>
+						<h2 className={"text-[100px] text-white font-bold -mt-10 -ml-2 text-shadow uppercase"}>{t('new')}</h2>
+					</RevealElement>
+					<RevealElement>
+						<h2 className="text-[60px] text-white -mt-16 ml-3 text-shadow uppercase">{t('year')}</h2>
+					</RevealElement>
 				</div>
 				{/* Small hero text */}
 				<div className='relative flex flex-col items-start z-10 p-6'>
@@ -92,14 +102,14 @@ function App() {
 
 							{/* photo */}
 							<RevealElement>
-								<div className="flex shrink-0 size-12 rounded-full bg-zinc-700 text-sky-300 border-2 border-zinc-600 overflow-hidden">
+								<div className="flex shrink-0 size-12 rounded-full bg-zinc-700 text-sky-300 border-2 border-sky-300/20 overflow-hidden">
 									<LuHandshake className='m-auto' size={30} />
 								</div>
 							</RevealElement>
 							{/* Bubble */}
 							<RevealElement>
-								<div className="relative z-10 flex p-3 hover:scale-105 bg-zinc-800 items-start border border-zinc-700 rounded-xl shadow-2xl duration-150 shadow-sky-300/40">
-									<div className="absolute bottom-1/2 translate-y-1/2 -left-3 rotate-45 bg-zinc-800 border size-7 border-zinc-700"></div>
+								<div className="relative z-10 flex p-3 hover:scale-105 bg-zinc-800 items-start border border-sky-300/20 rounded-xl shadow-2xl duration-150 shadow-sky-300/40">
+									<div className="absolute bottom-1/2 translate-y-1/2 -left-3 rotate-45 bg-zinc-800 border size-7 border-sky-300/20"></div>
 									<div className="absolute bottom-1/2 translate-y-1/2 left-0 bg-zinc-800 w-7 h-10"></div>
 									<div className='relative z-10'>
 										<p className="text-2xl text-left font-bold text-slate-100 ml-5">{t('openForBusiness')}</p>
@@ -123,7 +133,7 @@ function App() {
 							<p className="text-white/70">{t('sectionDesc2')}</p>
 						</RevealElement>
 						<RevealElement>
-							<div className="flex gap-4">
+							<div className="flex gap-4 mt-2">
 								<a target='_blank' href='https://cm.linkedin.com/in/nloga-joseph-christ-7b1651194' className="flex hover:brightness-110 active:brightness-125 transition-all duration-150 shrink-0 size-10 rounded-full mb-11 bg-zinc-700 border-2 border-zinc-600 overflow-hidden">
 									<FaLinkedinIn className='m-auto text-sky-300' size={20} />
 								</a>
