@@ -19,8 +19,8 @@ function App() {
 
 	console.log(language);
 
-	let services_en = ["Product Design (UI/UX)", "Web Development", "App Development", "MVP & Startup Support", "Technical Consulting", "Tech Brand Identity"];
-	let services_fr = ["Design de produits (UI/UX)", "Développement web", "Développement d'applications", "MVP & Support de startup", "Consulting technique", "Identité de marque technologique"];
+	let services_en = ["Product Design (UI/UX)", "Web Development", "App Development", "MVP & Startup Support", "Technical Consulting", "Tech Brand Identity", "Training"];
+	let services_fr = ["Design de produits (UI/UX)", "Développement web", "Développement d'applications", "MVP & Support de startup", "Consulting technique", "Identité de marque technologique", "Formation"];
 
 	const services = language === "en" ? services_en : services_fr;
 
