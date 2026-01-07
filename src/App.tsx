@@ -8,7 +8,9 @@ import { BiCheckCircle } from 'react-icons/bi';
 import { LuHandshake } from 'react-icons/lu';
 import RevealElement from './components/RevealElement';
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
-import { BsTwitterX } from 'react-icons/bs';
+import { BsEnvelopeAtFill, BsTwitterX } from 'react-icons/bs';
+import { HiPhone } from 'react-icons/hi';
+import { IoLogoWhatsapp } from 'react-icons/io';
 
 function App() {
 	const { t, i18n } = useTranslation();
@@ -133,16 +135,23 @@ function App() {
 							<p className="text-white/70">{t('sectionDesc2')}</p>
 						</RevealElement>
 						<RevealElement>
-							<div className="flex gap-4 mt-2">
-								<a target='_blank' href='https://cm.linkedin.com/in/nloga-joseph-christ-7b1651194' className="flex hover:brightness-110 active:brightness-125 transition-all duration-150 shrink-0 size-10 rounded-full mb-11 bg-zinc-700 border-2 border-zinc-600 overflow-hidden">
+							<div className="flex items-center gap-4 mt-2">
+								<a target='_blank' href='mailto:christ.nloga@gmail.com' className="flex hover:brightness-110 active:brightness-125 transition-all duration-150 shrink-0 size-10 rounded-full mb-11 bg-zinc-700 border-2 border-zinc-600 overflow-hidden">
+									<BsEnvelopeAtFill className='m-auto text-sky-300' size={20} />
+								</a>
+								<a target='_blank' href='https://wa.me/237693547773' className="flex hover:brightness-110 active:brightness-125 transition-all duration-150 shrink-0 size-10 rounded-full mb-11 bg-zinc-700 border-2 border-zinc-600 overflow-hidden">
+									<IoLogoWhatsapp className='m-auto text-sky-300' size={20} />
+								</a>
+								{/* <div className="relative h-8 w-[2px] shrink-0 bg-sky-300 rounded"></div> */}
+								<a target='_blank' href='https://www.linkedin.com/in/nloga-joseph-christ-7b1651194?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' className="flex hover:brightness-110 active:brightness-125 transition-all duration-150 shrink-0 size-10 rounded-full mb-11 bg-zinc-700 border-2 border-zinc-600 overflow-hidden">
 									<FaLinkedinIn className='m-auto text-sky-300' size={20} />
 								</a>
 								<a target='_blank' href='https://web.facebook.com/christ.nloga/?_rdc=1&_rdr#' className="flex hover:brightness-110 active:brightness-125 transition-all duration-150 shrink-0 size-10 rounded-full mb-11 bg-zinc-700 border-2 border-zinc-600 overflow-hidden">
 									<FaFacebookF className='m-auto text-sky-300' size={20} />
 								</a>
-								<a target='_blank' href='https://x.com/_nloga?t=Y_tI_pkTsMRq0zljqk66Kg&s=08' className="flex hover:brightness-110 active:brightness-125 shrink-0 size-10 rounded-full mb-11 bg-zinc-700 border-2 border-zinc-600 overflow-hidden">
+								{/* <a target='_blank' href='https://x.com/_nloga?t=Y_tI_pkTsMRq0zljqk66Kg&s=08' className="flex hover:brightness-110 active:brightness-125 shrink-0 size-10 rounded-full mb-11 bg-zinc-700 border-2 border-zinc-600 overflow-hidden">
 									<BsTwitterX className='m-auto text-sky-300' size={20} />
-								</a>
+								</a> */}
 							</div>
 						</RevealElement>
 					</div>

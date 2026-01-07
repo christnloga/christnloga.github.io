@@ -28,7 +28,7 @@ i18n
           sectionTitle1: 'From first idea to final launch',
           sectionTitle2: 'Full web portfolio coming soon, stay tuned!',
           sectionDesc1: 'Design, development, and structure working together',
-          sectionDesc2: 'Follow my activities on:',
+          sectionDesc2: 'Stay in touch with me:',
           openForBusiness: 'Now open for new collaborations in 2026',
         }
       },
@@ -44,7 +44,7 @@ i18n
           sectionTitle1: 'De l\'idée initiale au lancement final',
           sectionTitle2: 'Portfolio web en cours, restez connecté!',
           sectionDesc1: 'Design, développement et structure travaillant ensemble',
-          sectionDesc2: 'Suivez mes activités sur:',
+          sectionDesc2: 'Restez en contact avec moi:',
           openForBusiness: 'Ouvert à de nouvelles collaborations pour 2026',
         }
       }
